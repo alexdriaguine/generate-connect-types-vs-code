@@ -1,42 +1,42 @@
 {
-  "name": "generate-connect-typs-code",
-  "displayName": "generate-connect-types",
-  "description": "Generate typings for connect props",
-  "version": "0.0.1",
-  "publisher": "alexdriaguine",
-  "engines": {
-    "vscode": "^1.23.0"
-  },
-  "categories": [
-    "Other"
-  ],
-  "activationEvents": [
-    "onCommand:extension.generateConnectTypes"
-  ],
-  "main": "./out/extension",
-  "contributes": {
-    "commands": [
-      {
-        "command": "extension.generateConnectTypes",
-        "title": "Generate connect types"
-      }
-    ]
-  },
-  "scripts": {
-    "vscode:prepublish": "npm run compile",
-    "compile": "tsc -p ./",
-    "watch": "tsc -watch -p ./",
-    "postinstall": "node ./node_modules/vscode/bin/install",
-    "test": "npm run compile && node ./node_modules/vscode/bin/test"
-  },
-  "devDependencies": {
-    "@types/mocha": "^2.2.42",
-    "@types/node": "^7.0.43",
-    "tslint": "^5.8.0",
-    "typescript": "^2.6.1",
-    "vscode": "^1.1.6"
-  },
-  "dependencies": {
-    "generate-connect-types": "^0.2.9"
-  }
+    "name": "generate-connect-types",
+    "displayName": "generate-connect-types",
+    "description": "Generate typings for connect props",
+    "version": "0.7.0",
+    "publisher": "alexdriaguine",
+    "engines": {
+        "vscode": "^1.23.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:extension.generateConnectTypes"
+    ],
+    "main": "./out/extension",
+    "contributes": {
+        "commands": [
+            {
+                "command": "extension.generateConnectTypes",
+                "title": "Generate connect types"
+            }
+        ]
+    },
+    "scripts": {
+        "vscode:prepublish": "yarn && yarn compile && npm prune --production",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "yarn compile && node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "@types/mocha": "^2.2.42",
+        "@types/node": "^7.0.43",
+        "tslint": "^5.8.0",
+        "typescript": "^2.6.1",
+        "vscode": "^1.1.6"
+    },
+    "dependencies": {
+        "generate-connect-types": "^0.2.10"
+    }
 }
