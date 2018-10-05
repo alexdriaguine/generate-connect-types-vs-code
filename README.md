@@ -6,7 +6,7 @@ which can be found [here](https://github.com/alexdriaguine/generate-connect-type
 ## Features
 
 Given a input like
-
+//comment
 ```typescript
 import {connect} from 'react-redux'
 import {State} from './somewhere-appstate'
